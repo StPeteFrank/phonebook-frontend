@@ -1,14 +1,52 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.AddEditDeleteContactsTab {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: 1px solid black;
+}
+.ContactsContainer {
+  justify-content: space-evenly;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: 1px solid black;
+  border-spacing: none;
+  /* position: relative; */
+  margin-bottom: 33vh;
+}
+.ContactsTable {
+  width: 100%;
+}
+table,
+tr,
+td,
+th {
+  justify-content: space-evenly;
+  border-collapse: collapse;
+  border-spacing: none;
+  border: 1px solid black;
+}
+tr {
+  justify-content: space-evenly;
+  height: 2em;
+}
+td {
+  font-size: 1.75vh;
+  font-size: 1.75vw;
+}
+th {
+  font-size: 2vh;
+  font-size: 2vw;
 }
