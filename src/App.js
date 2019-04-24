@@ -10,11 +10,16 @@ class App extends Component {
         <div className="App">
           <div className="TitleContainer">
             <h1>Phone Book</h1>
-            <h2>Contacts</h2>
           </div>
+          <div className="Tabs">
+            <Link to="/contacts">
+              <button>CONTACTS</button>
+            </Link>
+          </div>
+
           <div />
 
-          {/* <Route exact path="/" component={Contacts} /> */}
+          {/* <Route exact path="/" component={Home} /> */}
           <Route path="/contacts" component={Contacts} />
         </div>
       </Router>
