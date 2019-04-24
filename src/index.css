@@ -68,6 +68,7 @@ tr {
   border: 1px solid black;
 }
 td {
+  color: black;
   align-items: center;
   justify-content: center;
   border-collapse: collapse;

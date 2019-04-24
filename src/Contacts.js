@@ -1,8 +1,27 @@
 import React, { Component } from 'react'
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-// import axios from 'axios'
+//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import axios from 'axios'
 
 class Contacts extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      allContacts: []
+    }
+  }
+
+  componentDidMount() {
+    this.loadAllContacts()
+  }
+
+  loadAllContacts = () => {
+    axios.get('https://localhost:5001/api/people').then(response => {
+      this.setState({
+        allContacts: response.data
+      })
+    })
+  }
+
   render() {
     return (
       <div>
@@ -18,12 +37,16 @@ class Contacts extends Component {
                 <th>PHONE</th>
                 <th>EMAIL</th>
               </tr>
-              <tr>
-                <td>Frank</td>
-                <td>Diaz</td>
-                <td>999999999999</td>
-                <td>zzz@yyy.com</td>
-              </tr>
+              {this.state.allContacts.map(people => {
+                return (
+                  <tr>
+                    <td>{people.firstName}</td>
+                    <td>{people.lastName}</td>
+                    <td>{people.phoneNumber}</td>
+                    <td>{people.email}</td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>
