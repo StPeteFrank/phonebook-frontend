@@ -12,13 +12,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.TitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
 .AddEditDeleteContactsTab {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   margin-left: 1vw;
   margin-right: 1vw;
   border: 1px solid black;
+  border-collapse: collapse;
 }
 .ContactsContainer {
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   margin-left: 1vw;
   margin-right: 1vw;
   border: 1px solid black;
@@ -27,26 +40,38 @@ code {
   margin-bottom: 33vh;
 }
 .ContactsTable {
+  justify-content: center;
   width: 100%;
 }
 table,
 tr,
 td,
 th {
-  justify-content: space-evenly;
+  justify-content: center;
   border-collapse: collapse;
   border-spacing: none;
   border: 1px solid black;
 }
 tr {
   justify-content: space-evenly;
-  height: 2em;
+  border-collapse: collapse;
+  border-spacing: none;
+  border: 1px solid black;
 }
 td {
-  font-size: 1.75vh;
-  font-size: 1.75vw;
+  align-items: center;
+  justify-content: center;
+  border-collapse: collapse;
+  border-spacing: none;
+  border: 1px solid black;
+  font-size: 2vh;
+  font-size: 2vw;
 }
 th {
+  align-items: center;
+  justify-content: space-evenly;
+  border-collapse: collapse;
+  border-spacing: none;
   font-size: 2vh;
   font-size: 2vw;
 }
