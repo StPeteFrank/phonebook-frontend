@@ -21,6 +21,16 @@ class DeleteContact extends Component {
     })
   }
 
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  cancelButton = () => {
+    window.location = '/contacts'
+  }
+
   render() {
     return (
       <div>
@@ -47,6 +57,7 @@ class DeleteContact extends Component {
               <button onClick={this.deleteSelectedContacts}>
                 DELETE CONTACT
               </button>
+              <button onClick={this.cancelButton}>CANCEL</button>
             </div>
           </section>
         </div>
