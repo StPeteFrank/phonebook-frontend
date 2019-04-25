@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './Home'
 import Contacts from './Contacts'
+import AddNewContact from './AddNewContact'
 import Callback from './Callback'
 import LogIn from './LogIn'
 //import auth0 from './Auth0'
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/contacts" component={Contacts} />
+          <Route path="/addNewContact" component={AddNewContact} />
           <Route path="/logIn" component={LogIn} />
           <Route path="/callback" component={Callback} />
         </div>

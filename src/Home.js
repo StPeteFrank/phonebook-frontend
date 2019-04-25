@@ -12,6 +12,9 @@ class Home extends Component {
           <Link to="/contacts">
             <button>CONTACTS</button>
           </Link>
+          <Link to="/login">
+            <button>LOG IN</button>
+          </Link>
         </div>
       </div>
     )
