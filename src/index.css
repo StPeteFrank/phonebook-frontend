@@ -29,45 +29,60 @@ link {
   color: black;
 }
 .AddEditDeleteContactsTab {
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  border: 1px solid black;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  /* border: 1px solid black; */
   border-collapse: collapse;
+}
+.AddEditDeleteContactsTab a {
+  text-decoration: none;
+  color: blue;
 }
 .ContactsContainer {
   justify-content: center;
   align-items: center;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  background-color: rgb(173, 169, 169);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border-radius: 10px;
   border: 1px solid black;
-  border-spacing: none;
+  /* border-spacing: none; */
   /* position: relative; */
   margin-bottom: 33vh;
+  border-collapse: collapse;
 }
 .ContactsTable {
   justify-content: center;
   width: 100%;
+  background-color: rgb(173, 169, 169);
+  border-radius: 10px;
+  border-collapse: collapse;
+  border: 1px solid black;
 }
 table,
 tr,
 td,
 th {
+  border-radius: 10px;
   justify-content: center;
   border-collapse: collapse;
   border-spacing: none;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 tr {
+  border-radius: 10px;
   justify-content: space-evenly;
   border-collapse: collapse;
   border-spacing: none;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 td {
+  border-radius: 10px;
   color: black;
   align-items: center;
   justify-content: center;
@@ -78,10 +93,19 @@ td {
   font-size: 2vw;
 }
 th {
+  /* border: 1px solid black; */
+  border-radius: 10px;
   align-items: center;
   justify-content: space-evenly;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   border-spacing: none;
   font-size: 2vh;
   font-size: 2vw;
+}
+.AddNewContact {
+  border: 1px solid black;
+  background-color: rgb(173, 169, 169);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  border-radius: 10px;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Contacts extends Component {
@@ -25,10 +25,14 @@ class Contacts extends Component {
   render() {
     return (
       <div>
+        <h2>Contacts</h2>
         <div className="AddEditDeleteContactsTab">
-          <h4>ADD/EDIT/DELETE CONTACTS</h4>
+          <Link to="/addNewContact">
+            <h4>ADD/EDIT/DELETE CONTACTS</h4>
+          </Link>
         </div>
         <div className="ContactsContainer">
+          {/* <h4>ADD/EDIT/DELETE CONTACTS</h4> */}
           <table className="ContactsTable">
             <tbody>
               <tr>
