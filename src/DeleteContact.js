@@ -57,7 +57,7 @@ class DeleteContact extends Component {
           contentType: 'application/json'
         },
         data: {
-          contactIds: this.state.contactIDsSelectedForDelete
+          peopleIds: this.state.contactIDsSelectedForDelete
         }
       })
       .then(() => this.loadAllContacts())
