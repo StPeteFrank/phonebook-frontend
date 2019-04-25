@@ -17,6 +17,13 @@ link {
   cursor: pointer;
   color: black;
 }
+button {
+  cursor: pointer;
+  color: black;
+  padding: 1vh;
+  border-radius: 5px;
+  margin: 1vh;
+}
 
 .TitleContainer {
   display: flex;
