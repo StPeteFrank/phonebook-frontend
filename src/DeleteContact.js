@@ -5,7 +5,9 @@ class DeleteContact extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allContacts: []
+      allContacts: [],
+      deleteContact: [],
+      contactIDsSelectedForDelete: []
     }
   }
 
@@ -31,6 +33,37 @@ class DeleteContact extends Component {
     window.location = '/contacts'
   }
 
+  _selectContactForDeletion = event => {
+    const selectedContactID = event.target.value
+
+    if (this.state.contactIDsSelectedForDelete.includes(selectedContactID)) {
+      const newIDs = this.state.contactIDsSelectedForDelete.filter(
+        id => id != selectedContactID
+      )
+
+      this.setState({ contactIDsSelectedForDelete: newIDs })
+    } else {
+      const newIDs = this.state.contactIDsSelectedForDelete.concat([
+        selectedContactID
+      ])
+      this.setState({ contactIDsSelectedForDelete: newIDs })
+    }
+  }
+
+  deleteSelectedContacts = () => {
+    axios
+      .delete('https://localhost:5001/api/people/list', {
+        headers: {
+          contentType: 'application/json'
+        },
+        data: {
+          contactIds: this.state.contactIDsSelectedForDelete
+        }
+      })
+      .then(() => this.loadAllContacts())
+    window.location = '/contacts'
+  }
+
   render() {
     return (
       <div>
@@ -44,8 +77,8 @@ class DeleteContact extends Component {
                   <input
                     className="DeleteCheckbox"
                     type="checkbox"
-                    // value={employee.id}
-                    // onClick={this._selectEmployeeForDeletion}
+                    value={people.id}
+                    onClick={this._selectContactForDeletion}
                   />
                   <label>
                     {people.firstName} {people.lastName}
