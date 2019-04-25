@@ -66,8 +66,8 @@ class AddNewContact extends Component {
         <h2>Add New Contacts</h2>
         <div className="AddNewContactContainer">
           <section className="AddNewContact">
-            <p>First</p>
             <div className="AddFirst">
+              <p>First</p>
               <input
                 type="text"
                 placeholder="Enter First Name"
@@ -76,8 +76,9 @@ class AddNewContact extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <p>Last</p>
+
             <div className="AddLast">
+              <p>Last</p>
               <input
                 type="text"
                 placeholder="Enter Last Name"
@@ -86,8 +87,9 @@ class AddNewContact extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <p>Phone Number</p>
+
             <div className="AddPhone">
+              <p>Phone Number</p>
               <input
                 type="text"
                 placeholder="Enter Phone Number"
@@ -96,8 +98,9 @@ class AddNewContact extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <p>Email</p>
+
             <div className="AddEmail">
+              <p>Email</p>
               <input
                 type="text"
                 placeholder="Enter Email"

@@ -28,7 +28,7 @@ class Contacts extends Component {
         <h2>Contacts</h2>
         <div className="AddEditDeleteContactsTab">
           <Link to="/addNewContact">
-            <button>ADD / DELETE CONTACTS</button>
+            <button>ADD CONTACTS</button>
           </Link>
         </div>
         <div className="ContactsContainer">
