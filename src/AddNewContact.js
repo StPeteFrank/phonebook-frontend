@@ -1,6 +1,30 @@
 import React, { Component } from 'react'
+//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import axios from 'axios'
 
 class AddNewContact extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      allContacts: []
+    }
+  }
+
+  componentDidMount() {
+    this.loadAllContacts()
+  }
+
+  loadAllContacts = () => {
+    axios.get('https://localhost:5001/api/people').then(response => {
+      this.setState({
+        allContacts: response.data
+      })
+    })
+  }
+  cancelButton = () => {
+    window.location = '/contacts'
+  }
+
   render() {
     return (
       <div>
@@ -46,6 +70,10 @@ class AddNewContact extends Component {
                 // value={this.state.firstName}
                 // onChange={this.handleChange}
               />
+            </div>
+            <div className="AddNewContactButton">
+              {/* <button onClick={this.addEmployeeToApi}>ADD EMPLOYEE</button> */}
+              <button onClick={this.cancelButton}>CANCEL</button>
             </div>
           </section>
         </div>
