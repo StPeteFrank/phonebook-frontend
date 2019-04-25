@@ -116,3 +116,18 @@ th {
   margin-right: 10vw;
   border-radius: 10px;
 }
+.DeleteContactsContainer {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(173, 169, 169);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 20vh;
+}
+.DeleteContacts {
+  font-display: flex;
+  flex-direction: column;
+  text-align: left;
+}
