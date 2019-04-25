@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+//import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
 class Contacts extends Component {
@@ -22,14 +22,27 @@ class Contacts extends Component {
     })
   }
 
+  addContactsButton = () => {
+    window.location = '/addNewContact'
+  }
+
+  deleteContactsButton = () => {
+    window.location = '/deleteContact'
+  }
+
   render() {
     return (
       <div>
         <h2>Contacts</h2>
         <div className="AddEditDeleteContactsTab">
-          <Link to="/addNewContact">
+          <button onClick={this.addContactsButton}>ADD CONTACTS</button>
+          <button onClick={this.deleteContactsButton}>DELETE CONTACTS</button>
+          {/* <Link to="/addNewContact">
             <button>ADD CONTACTS</button>
           </Link>
+          <Link to="/deleteContact">
+            <button>DELETE CONTACTS</button>
+          </Link> */}
         </div>
         <div className="ContactsContainer">
           {/* <h4>ADD/EDIT/DELETE CONTACTS</h4> */}

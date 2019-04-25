@@ -23,6 +23,10 @@ button {
   padding: 1vh;
   border-radius: 5px;
   margin: 1vh;
+  border: 1px solid black;
+}
+.Tabs button {
+  border: 1px solid black;
 }
 
 .TitleContainer {
@@ -39,16 +43,18 @@ button {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   margin-left: 10vw;
   margin-right: 10vw;
   /* border: 1px solid black; */
   border-collapse: collapse;
 }
-.AddEditDeleteContactsTab a {
-  text-decoration: none;
-  color: blue;
+.AddEditDeleteContactsTab button {
+  font-display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid black;
 }
 .ContactsContainer {
   justify-content: center;
@@ -116,6 +122,9 @@ th {
   margin-right: 10vw;
   border-radius: 10px;
 }
+.AddNewContact button {
+  border: 1px solid black;
+}
 .DeleteContactsContainer {
   border: 1px solid black;
   border-radius: 10px;
@@ -130,4 +139,7 @@ th {
   font-display: flex;
   flex-direction: column;
   text-align: left;
+}
+.DeleteContacts button {
+  border: 1px solid black;
 }
