@@ -2,12 +2,40 @@ import React, { Component } from 'react'
 //import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
+// addEmployeeToApi = e => {
+//   e.preventDefault()
+//   axios
+//     .post(config.API_URL + '/employees', {
+//       firstName: this.state.firstName,
+//       lastName: this.state.lastName,
+//       phoneNumber: this.state.phoneNumber,
+//       emailAddress: this.state.emailAddress
+//     })
+//     .then(() => {
+//       window.location.href = '/employees'
+//     })
+// }
+
 class AddNewContact extends Component {
   constructor(props) {
     super(props)
     this.state = {
       allContacts: []
     }
+  }
+
+  addContactToPeopleDB = e => {
+    e.preventDefault()
+    axios
+      .post('https://localhost:5001/api/people', {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        phoneNumber: this.state.phoneNumber,
+        email: this.state.email
+      })
+      .then(() => {
+        window.location.href = '/contacts'
+      })
   }
 
   componentDidMount() {
@@ -21,8 +49,15 @@ class AddNewContact extends Component {
       })
     })
   }
+
   cancelButton = () => {
     window.location = '/contacts'
+  }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   render() {
@@ -37,8 +72,8 @@ class AddNewContact extends Component {
                 type="text"
                 placeholder="Enter First Name"
                 name="firstName"
-                // value={this.state.firstName}
-                // onChange={this.handleChange}
+                value={this.state.firstName}
+                onChange={this.handleChange}
               />
             </div>
             <p>Last</p>
@@ -47,8 +82,8 @@ class AddNewContact extends Component {
                 type="text"
                 placeholder="Enter Last Name"
                 name="lastName"
-                // value={this.state.firstName}
-                // onChange={this.handleChange}
+                value={this.state.lastName}
+                onChange={this.handleChange}
               />
             </div>
             <p>Phone Number</p>
@@ -57,8 +92,8 @@ class AddNewContact extends Component {
                 type="text"
                 placeholder="Enter Phone Number"
                 name="phoneNumber"
-                // value={this.state.firstName}
-                // onChange={this.handleChange}
+                value={this.state.phoneNumber}
+                onChange={this.handleChange}
               />
             </div>
             <p>Email</p>
@@ -67,12 +102,12 @@ class AddNewContact extends Component {
                 type="text"
                 placeholder="Enter Email"
                 name="email"
-                // value={this.state.firstName}
-                // onChange={this.handleChange}
+                value={this.state.email}
+                onChange={this.handleChange}
               />
             </div>
             <div className="AddNewContactButton">
-              {/* <button onClick={this.addEmployeeToApi}>ADD EMPLOYEE</button> */}
+              <button onClick={this.addContactToPeopleDB}>ADD CONTACT</button>
               <button onClick={this.cancelButton}>CANCEL</button>
             </div>
           </section>
