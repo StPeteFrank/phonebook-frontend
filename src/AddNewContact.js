@@ -2,20 +2,6 @@ import React, { Component } from 'react'
 //import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
-// addEmployeeToApi = e => {
-//   e.preventDefault()
-//   axios
-//     .post(config.API_URL + '/employees', {
-//       firstName: this.state.firstName,
-//       lastName: this.state.lastName,
-//       phoneNumber: this.state.phoneNumber,
-//       emailAddress: this.state.emailAddress
-//     })
-//     .then(() => {
-//       window.location.href = '/employees'
-//     })
-// }
-
 class AddNewContact extends Component {
   constructor(props) {
     super(props)

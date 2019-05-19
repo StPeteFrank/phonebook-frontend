@@ -32,7 +32,7 @@ class DeleteContact extends Component {
   cancelButton = () => {
     window.location = '/contacts'
   }
-
+  //Delete by list not working 5/19/19
   _selectContactForDeletion = event => {
     const selectedContactID = event.target.value
 
